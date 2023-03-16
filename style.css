@@ -1,0 +1,317 @@
+:root {
+  --background: linear-gradient(135deg, #131313, #ffffff);
+  --w: white;
+  --nav-bar: #7b7b7b;
+  --h-span: #e09146;
+  --h-icons: #ffffff;
+  --btn: black;
+  --title: grey;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: var(--w);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+header,
+.s1,
+.s2,
+.s3,
+.s4,
+.s5 {
+  max-width: 1280px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2.5em;
+}
+
+h3 {
+  font-size: 2em;
+}
+
+h4 {
+  font-size: 1.5em;
+}
+
+h5 {
+  font-size: 1.2em;
+}
+
+.title {
+  /* background: var(--title); */
+  height: 4em;
+  width: 100%;
+  background: linear-gradient(0deg, #6767676b, transparent);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: capitalize;
+  font-size: 2em;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: dimgrey;
+}
+
+.home-section,
+.about-section,
+.project-section,
+.skills-section {
+  transform: translate(70px, 0);
+  width: calc(100% - 70px);
+  overflow: hidden;
+}
+
+.home-section,
+.project-section,
+.skills-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100vh;
+}
+
+/*  ==========  Navbar Section ==========  */
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 10%;
+  max-width: 70px;
+  height: 100%;
+  background-color: var(--nav-bar);
+  font-size: 22px;
+  position: fixed;
+}
+
+.navbar h4 {
+  position: absolute;
+  top: 5%;
+  background: #e09146;
+  padding: 5px;
+  border-radius: 50%;
+  width: 47px;
+  text-align: center;
+}
+
+.nav-items {
+  list-style: none;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  line-height: 3.4em;
+}
+
+.nav-items li {
+  padding: 5px 10px;
+  text-align: center;
+}
+
+.icons {
+  color: var(--h-icons);
+}
+
+/*  ========== Home Section ==========  */
+
+.home-section {
+  background: var(--background);
+  transform: translate(70px, 0);
+}
+
+.home-text {
+  text-transform: capitalize;
+  line-height: 40px;
+  padding: 10px;
+  position: relative;
+  font-size: 18px;
+}
+
+.home-text::before {
+  content: "";
+  width: 3px;
+  height: 4em;
+  background: var(--w);
+  position: absolute;
+  left: -5px;
+}
+
+.home-text h2 span {
+  color: var(--h-span);
+}
+
+.home-text h4 {
+  font-weight: 300;
+}
+
+.home-section img {
+  order: 2;
+  max-width: 14em;
+  border-radius: 50%;
+  width: 25vw;
+  height: auto;
+  -webkit-box-shadow: 0px 0px 10px 3px rgb(233 233 233 / 75%);
+}
+
+.home-section button {
+  color: var(--btn);
+  padding: 0.4em 1.3em;
+  border-radius: 5px;
+  border: none;
+}
+
+/*  ==========  About Section ==========  */
+
+.about-section,
+.project-section {
+  height: auto;
+  padding: 0 0 5em 0;
+}
+
+/* .about-section {
+  padding-top: 0;
+} */
+
+.about-content {
+  display: flex;
+  margin: 5em 0 0 0;
+}
+
+.about-img {
+  width: 40%;
+  text-align: center;
+  position: relative;
+}
+
+.about-img img {
+  width: 100%;
+  max-width: 18em;
+  padding: 1.5em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.about-section p {
+  color: black;
+  width: 60%;
+  background-color: #7e7e7e12;
+  padding: 3.5em;
+  /* overflow: hidden; */
+}
+
+/*  ==========  skills Section ==========  */
+
+.skills-section {
+  height: auto;
+}
+
+/*  ==========  Project Section ==========  */
+
+.project-section {
+  flex-direction: column;
+}
+
+.skill-cards,
+.project-cards {
+  display: flex;
+  padding: 5em 10px;
+  flex-wrap: wrap;
+  gap: 2em;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.p-card {
+  width: 20em;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+  text-transform: capitalize;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.p-card * {
+  padding: 5px;
+  color: black;
+}
+
+.p-card-img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+.p-card a {
+  text-decoration: none;
+}
+
+.card:hover {
+  box-shadow: rgb(143 143 143) 0px 20px 30px -10px;
+  transition: 0.5s;
+}
+
+/* skill-card */
+
+.skills {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.s-card {
+  text-align: center;
+  padding: 2em;
+  border-radius: 10px;
+  box-shadow: rgb(99 99 99 / 20%) 0px 2px 8px 0px;
+}
+
+.s-card i {
+  font-size: 5em;
+  color: black;
+}
+
+.s-card h5 {
+  color: black;
+  padding: 1em 0 0 0;
+}
+
+/* owl-carousel */
+.item h4 {
+  color: black;
+  text-align: center;
+}
+
+/* .item {
+  border: 2px solid black;
+}
+
+.owl-carousel {
+  border: 2px solid red;
+} */
+
+.owl-theme .owl-dots .owl-dot.active span {
+  background: #00ffa5;
+}
+
+.owl-theme .owl-nav {
+  display: none;
+}
+
+.owl-theme .owl-dots {
+  margin-bottom: 4em;
+  /* text-align: center; */
+}

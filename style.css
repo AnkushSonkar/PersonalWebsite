@@ -202,11 +202,24 @@ h5 {
   padding: 3.5em;
   overflow: hidden;
 }
+/* review */
+.about-buttons {
+  text-align: center;
+  transform: translate(70px, 0px);
+  width: calc(100% - 70px);
+  padding: 5px;
+  letter-spacing: 50px;
+}
 
 /*  ==========  skills Section ==========  */
 
 .skills-section {
   height: auto;
+}
+
+.experience-section,
+.education-section {
+  text-align: center;
 }
 
 /*  ==========  Project Section ==========  */

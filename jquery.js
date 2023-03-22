@@ -11,7 +11,18 @@ $(document).ready(function () {
   });
 
   $(".about-buttons .button").click(function () {
+    // remove active-btn class from all buttons and active from skill button
+    $(".button").removeClass("active");
     $(".button").removeClass("active-btn");
+
+    // add active-btn class to button when its clicked
     $(this).addClass("active-btn");
+
+    // hide all section
+    $(".btn-content").hide();
+
+    // show corresponding section using index number
+    var index = $(this).index();
+    $(".btn-content").eq(index).show();
   });
 });

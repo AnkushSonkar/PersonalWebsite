@@ -10,21 +10,8 @@ $(document).ready(function () {
     autoplayHoverPause: "true",
   });
 
-  $("#skills-btn").click(function () {
-    $(".skills-section").css("display", "block");
-    $(".education-section").css("display", "none");
-    $(".experience-section").css("display", "none");
-  });
-
-  $("#education-btn").click(function () {
-    $(".education-section").css("display", "block");
-    $(".skills-section").css("display", "none");
-    $(".experience-section").css("display", "none");
-  });
-
-  $("#experience-btn").click(function () {
-    $(".experience-section").css("display", "block");
-    $(".education-section").css("display", "none");
-    $(".skills-section").css("display", "none");
+  $(".about-buttons .button").click(function () {
+    $(".button").removeClass("active-btn");
+    $(this).addClass("active-btn");
   });
 });

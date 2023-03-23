@@ -62,6 +62,8 @@ h5 {
 .about-section,
 .about-buttons,
 .skills-section,
+.education-section,
+.experience-section,
 .project-section {
   transform: translate(70px, 0);
   width: calc(100% - 70px);
@@ -240,6 +242,63 @@ h5 {
 .education-section {
   text-align: center;
   display: none;
+}
+
+.timeline {
+  padding: 2em;
+  position: relative;
+}
+
+.line {
+  background-color: var(--greyish);
+  height: 100%;
+  width: 2px;
+  margin: auto;
+  transform: translate(-50%, 0);
+  position: absolute;
+  left: calc(50% - 1px);
+}
+
+.line::before,
+.line::after,
+.education-item::after {
+  content: "";
+  background-color: var(--greyish);
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(-50%, 0);
+}
+
+.education-item::after {
+  right: 0%;
+  transform: translate(50%, -100%);
+}
+
+.education-item:nth-child(odd):after {
+  left: -1px;
+  transform: translate(-50%, -100%);
+}
+
+.line::after {
+  bottom: 32px;
+}
+
+.education-item {
+  max-width: calc(50% - 1px);
+  height: auto;
+  padding: 2em 4em;
+}
+
+.education-item:nth-child(odd) {
+  right: -50%;
+  position: relative;
+}
+
+.education-item:nth-child(even) {
+  left: 0;
+  position: relative;
 }
 
 /*  ==========  Project Section ==========  */

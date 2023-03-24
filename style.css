@@ -301,13 +301,13 @@ h6 {
 .education-item:nth-child(odd) {
   right: -50%;
   position: relative;
-  text-align: -webkit-left;
+  text-align: left;
 }
 
 .education-item:nth-child(even) {
   left: 0;
   position: relative;
-  text-align: -webkit-right;
+  text-align: right;
 }
 
 .education-content * {

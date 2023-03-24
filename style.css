@@ -1,18 +1,15 @@
 :root {
-  --background: linear-gradient(135deg, #131313, #ffffff);
-  --w: white;
-  --nav-bar: #7b7b7b;
-  --h-span: #e09146;
-  --h-icons: #ffffff;
-  --btn: black;
-  --title: grey;
+  --background: #f0f8ffe3;
+  --greyish: #7b7b7b;
+  --greenish: #a9cec2;
+  --white: #ffffff;
 }
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  color: var(--w);
+  color: var(--greyish);
 }
 
 html {
@@ -50,10 +47,8 @@ h5 {
 }
 
 .title {
-  /* background: var(--title); */
   height: 4em;
   width: 100%;
-  background: linear-gradient(0deg, #6767676b, transparent);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -61,13 +56,15 @@ h5 {
   font-size: 2em;
   font-weight: 600;
   letter-spacing: 2px;
-  color: dimgrey;
 }
 
 .home-section,
 .about-section,
-.project-section,
-.skills-section {
+.about-buttons,
+.skills-section,
+.education-section,
+.experience-section,
+.project-section {
   transform: translate(70px, 0);
   width: calc(100% - 70px);
   overflow: hidden;
@@ -91,7 +88,7 @@ h5 {
   width: 10%;
   max-width: 70px;
   height: 100%;
-  background-color: var(--nav-bar);
+  background-color: var(--greyish);
   font-size: 22px;
   position: fixed;
 }
@@ -99,7 +96,8 @@ h5 {
 .navbar h4 {
   position: absolute;
   top: 5%;
-  background: #e09146;
+  background: #a9cec2;
+  color: white;
   padding: 5px;
   border-radius: 50%;
   width: 47px;
@@ -120,7 +118,7 @@ h5 {
 }
 
 .icons {
-  color: var(--h-icons);
+  color: var(--white);
 }
 
 /*  ========== Home Section ==========  */
@@ -142,13 +140,13 @@ h5 {
   content: "";
   width: 3px;
   height: 4em;
-  background: var(--w);
+  background: var(--greyish);
   position: absolute;
   left: -5px;
 }
 
 .home-text h2 span {
-  color: var(--h-span);
+  color: var(--greenish);
 }
 
 .home-text h4 {
@@ -165,10 +163,11 @@ h5 {
 }
 
 .home-section button {
-  color: var(--btn);
+  color: var(--white);
   padding: 0.4em 1.3em;
   border-radius: 5px;
   border: none;
+  background-color: #a9cec2;
 }
 
 /*  ==========  About Section ==========  */
@@ -179,13 +178,9 @@ h5 {
   padding: 0 0 5em 0;
 }
 
-/* .about-section {
-  padding-top: 0;
-} */
-
 .about-content {
   display: flex;
-  margin: 5em 0 0 0;
+  /* margin: 5em 0 0 0; */
 }
 
 .about-img {
@@ -205,17 +200,105 @@ h5 {
 }
 
 .about-section p {
-  color: black;
+  color: --greyish;
   width: 60%;
-  background-color: #7e7e7e12;
-  padding: 3.5em;
-  /* overflow: hidden; */
+  padding: 2.5em 10px;
+  overflow: hidden;
+}
+
+.about-buttons {
+  text-align: center;
+  padding: 5px;
+  letter-spacing: 50px;
+}
+
+#skills-btn,
+#education-btn,
+#experience-btn {
+  padding: 5px 15px;
+  border: none;
+  font-weight: 600;
+  border-radius: 20px;
+  text-transform: capitalize;
+  background: white;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+}
+
+.active-btn {
+  color: var(--greenish);
+}
+
+.active {
+  color: var(--greenish);
 }
 
 /*  ==========  skills Section ==========  */
 
 .skills-section {
   height: auto;
+}
+
+.experience-section,
+.education-section {
+  text-align: center;
+  display: none;
+}
+
+.timeline {
+  padding: 2em;
+  position: relative;
+}
+
+.line {
+  background-color: var(--greyish);
+  height: 100%;
+  width: 2px;
+  margin: auto;
+  transform: translate(-50%, 0);
+  position: absolute;
+  left: calc(50% - 1px);
+}
+
+.line::before,
+.line::after,
+.education-item::after {
+  content: "";
+  background-color: var(--greyish);
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(-50%, 0);
+}
+
+.education-item::after {
+  right: 0%;
+  transform: translate(50%, -100%);
+}
+
+.education-item:nth-child(odd):after {
+  left: -1px;
+  transform: translate(-50%, -100%);
+}
+
+.line::after {
+  bottom: 32px;
+}
+
+.education-item {
+  max-width: calc(50% - 1px);
+  height: auto;
+  padding: 2em 4em;
+}
+
+.education-item:nth-child(odd) {
+  right: -50%;
+  position: relative;
+}
+
+.education-item:nth-child(even) {
+  left: 0;
+  position: relative;
 }
 
 /*  ==========  Project Section ==========  */
@@ -245,7 +328,7 @@ h5 {
 
 .p-card * {
   padding: 5px;
-  color: black;
+  color: --greyish;
 }
 
 .p-card-img {
@@ -281,29 +364,29 @@ h5 {
 
 .s-card i {
   font-size: 5em;
-  color: black;
+  color: --greyish;
 }
 
 .s-card h5 {
-  color: black;
+  color: --greyish;
   padding: 1em 0 0 0;
 }
 
 /* owl-carousel */
 .item h4 {
-  color: black;
+  color: --greyish;
   text-align: center;
 }
 
 /* .item {
-  border: 2px solid black;
+  border: 2px solid --greyish;
 }
 
 .owl-carousel {
   border: 2px solid red;
 } */
 
-.owl-theme .owl-dots .owl-dot.active span {
+.owl-theme .owl-dots .owl-dot .active span {
   background: #00ffa5;
 }
 

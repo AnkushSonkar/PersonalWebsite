@@ -46,6 +46,10 @@ h5 {
   font-size: 1.2em;
 }
 
+h6 {
+  font-size: 1em;
+}
+
 .title {
   height: 4em;
   width: 100%;
@@ -212,6 +216,8 @@ h5 {
   letter-spacing: 50px;
 }
 
+/*  ==========  about-btn and skills Section ==========  */
+
 #skills-btn,
 #education-btn,
 #experience-btn {
@@ -232,8 +238,6 @@ h5 {
   color: var(--greenish);
 }
 
-/*  ==========  skills Section ==========  */
-
 .skills-section {
   height: auto;
 }
@@ -244,6 +248,8 @@ h5 {
   display: none;
 }
 
+/*  ==========  education/timeline Section ==========  */
+
 .timeline {
   padding: 2em;
   position: relative;
@@ -251,7 +257,7 @@ h5 {
 
 .line {
   background-color: var(--greyish);
-  height: 100%;
+  height: calc(100% - 4em);
   width: 2px;
   margin: auto;
   transform: translate(-50%, 0);
@@ -273,16 +279,17 @@ h5 {
 
 .education-item::after {
   right: 0%;
+  top: 50%;
   transform: translate(50%, -100%);
 }
 
-.education-item:nth-child(odd):after {
+.education-item:nth-child(odd)::after {
   left: -1px;
   transform: translate(-50%, -100%);
 }
 
 .line::after {
-  bottom: 32px;
+  bottom: 0;
 }
 
 .education-item {
@@ -294,13 +301,18 @@ h5 {
 .education-item:nth-child(odd) {
   right: -50%;
   position: relative;
+  text-align: -webkit-left;
 }
 
 .education-item:nth-child(even) {
   left: 0;
   position: relative;
+  text-align: -webkit-right;
 }
 
+.education-content * {
+  margin: 10px;
+}
 /*  ==========  Project Section ==========  */
 
 .project-section {

@@ -68,7 +68,8 @@ h6 {
 .skills-section,
 .education-section,
 .experience-section,
-.project-section {
+.project-section,
+.contact-section {
   transform: translate(70px, 0);
   width: calc(100% - 70px);
   overflow: hidden;
@@ -76,7 +77,9 @@ h6 {
 
 .home-section,
 .project-section,
-.skills-section {
+.skills-section,
+.contact-section {
+  /*contact section should review later */
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -163,7 +166,7 @@ h6 {
   border-radius: 50%;
   width: 25vw;
   height: auto;
-  -webkit-box-shadow: 0px 0px 10px 3px rgb(233 233 233 / 75%);
+  box-shadow: 0px 0px 10px 3px rgb(233 233 233 / 75%);
 }
 
 .home-section button {
@@ -230,12 +233,14 @@ h6 {
   box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
 }
 
-.active-btn {
+/* .active-btn {
   color: var(--greenish);
-}
+  background-color: #7b7b7b;
+} */
 
-.active {
-  color: var(--greenish);
+#skills-btn {
+  background-color: var(--greenish);
+  color: white;
 }
 
 .skills-section {
@@ -301,18 +306,19 @@ h6 {
 .education-item:nth-child(odd) {
   right: -50%;
   position: relative;
-  text-align: -webkit-left;
+  text-align: left;
 }
 
 .education-item:nth-child(even) {
   left: 0;
   position: relative;
-  text-align: -webkit-right;
+  text-align: right;
 }
 
 .education-content * {
   margin: 10px;
 }
+
 /*  ==========  Project Section ==========  */
 
 .project-section {
@@ -409,4 +415,29 @@ h6 {
 .owl-theme .owl-dots {
   margin-bottom: 4em;
   /* text-align: center; */
+}
+
+/*  ==========  contact Section ==========  */
+
+label {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }

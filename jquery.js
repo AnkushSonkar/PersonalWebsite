@@ -11,12 +11,15 @@ $(document).ready(function () {
   });
 
   $(".about-buttons .button").click(function () {
-    // remove active-btn class from all buttons and active from skill button
-    $(".button").removeClass("active");
-    $(".button").removeClass("active-btn");
+    // remove active-btn class from all buttons
+    $(".button")
+      .removeClass("active-btn")
+      .css({ background: "white", color: "var(--greyish)" });
 
     // add active-btn class to button when its clicked
-    $(this).addClass("active-btn");
+    $(this)
+      .addClass("active-btn")
+      .css({ background: "var(--greenish)", color: "white" });
 
     // hide all section
     $(".btn-content").hide();
